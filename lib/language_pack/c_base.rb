@@ -96,7 +96,7 @@ BASH
     end
 
     def status_file
-      release_info["status_file"] ? "app/#{release_info["status_file"]}":"app/status.file"
+      release_info["status_file"] ? "#{release_info["status_file"]}":"status.file"
     end
 
   
