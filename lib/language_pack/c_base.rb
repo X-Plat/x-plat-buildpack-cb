@@ -96,7 +96,7 @@ BASH
     end
 
     def status_file
-      release_info["status_file"] ? "app/#{release_info["status_file"]}":"app/status.file"
+      release_info["status_file"] ? "#{release_info["status_file"]}":"status.file"
     end
 
   
@@ -105,7 +105,7 @@ BASH
         File.open(path, 'wb') do |f|
           f.puts main_script
         end
-      FileUtils.chmod(0500, path)
+      FileUtils.chmod(0544, path)
     end
 
     def create_manifest
